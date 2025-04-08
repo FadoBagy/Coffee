@@ -1,0 +1,1046 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #4B2E2A;
+    background-color: #f8f8f8;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* TOP BAR */
+.top-bar {
+    background-color: #FFF;
+    padding: 0.5rem;
+}
+
+.top-bar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-options a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #4B2E2A;
+}
+
+/* MAIN HEADER (STICKY) */
+.main-header {
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* LOGO */
+.main-header .logo {
+    padding: 0.5rem 1rem;
+}
+
+.main-header .logo h1 {
+    color: #4B2E2A;
+    margin: 0;
+}
+
+/* NAV */
+.main-nav {
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+    position: relative;
+    /* So the mega-menu can position absolutely inside it */
+}
+
+/* NAV - LEFT LINKS */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* HEADER RIGHT: SEARCH, CART, ACCOUNT */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+}
+
+/* Nav items */
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4B2E2A;
+    font-weight: 500;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #D2B48C;
+    color: #fff;
+}
+
+/* MEGA MENU */
+.mega-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* ensures it stretches to full nav width */
+    top: 26px;
+    /* directly below the nav bar */
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+    z-index: 999;
+    width: 750px;
+}
+
+.dropdown:hover .mega-menu {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.mega-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 150px;
+}
+
+.mega-column h3 {
+    margin-bottom: 0.5rem;
+}
+
+.mega-column img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+}
+
+.mega-column a {
+    color: #4B2E2A;
+    text-decoration: none;
+    margin-bottom: 0.25rem;
+}
+
+/* ICONS in the nav (cart, account) */
+.cart,
+.account {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero-section {
+    background: url('./top-view-coffee-accessories-table.jpg') center/cover no-repeat;
+    height: 400px;
+    position: relative;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #8B4513, #D2B48C);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: transform 0.3s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+}
+
+/* QUICK CATEGORIES */
+.quick-categories {
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.quick-categories h2 {
+    margin-bottom: 1rem;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+}
+
+.category-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.category-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+/* PROMO SECTION */
+.promo-section {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.promo-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.promo-item {
+    background: #fff;
+    border-radius: 8px;
+    width: 220px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.promo-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+}
+
+.old-price {
+    text-decoration: line-through;
+}
+
+.new-price {
+    color: red;
+    font-weight: bold;
+}
+
+/* FEATURED PRODUCTS */
+.featured-products {
+    background: #F5F5F5;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.featured-products h2 {
+    margin-bottom: 1rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product {
+    background: #FFFFFF;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.product:hover {
+    transform: scale(1.03);
+}
+
+.product img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.product button {
+    background: #8B4513;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* VOLUME DISCOUNTS */
+.volume-discounts {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.product-discount-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1rem;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-info img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.discount-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.red {
+    color: red;
+}
+
+/* LOYALTY SECTION */
+.loyalty-section {
+    max-width: 1200px;
+    margin: 2rem auto;
+    background: #D2B48C;
+    color: #4B2E2A;
+    text-align: center;
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.loyalty-section h2 {
+    margin-bottom: 1rem;
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #4B2E2A;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s;
+    margin-top: 1rem;
+}
+
+.btn-secondary:hover {
+    transform: scale(1.05);
+}
+
+/* BRANDS (Extra section) */
+.brands {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.brands h2 {
+    margin-bottom: 1rem;
+}
+
+.brand-row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.brand-row img {
+    width: 80px;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.brand-row img:hover {
+    filter: grayscale(0%);
+}
+
+/* NEWSLETTER */
+.newsletter-section {
+    background: #4B2E2A;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.newsletter-section h2 {
+    margin-bottom: 0.5rem;
+}
+
+.newsletter-section form {
+    margin-top: 1rem;
+}
+
+.newsletter-section input[type="email"] {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+}
+
+.newsletter-section button {
+    padding: 0.5rem 1rem;
+    background: #D2B48C;
+    border: none;
+    color: #4B2E2A;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* LIVE CHAT */
+.live-chat-teaser {
+    max-width: 1200px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.live-chat-teaser button {
+    padding: 0.75rem 1.5rem;
+    background: #8B4513;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.live-chat-teaser button:hover {
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+.site-footer {
+    background: #4B2E2A;
+    color: #fff;
+    padding: 2rem 1rem;
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column h3 {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+    display: block;
+    color: #D2B48C;
+    text-decoration: none;
+    margin: 0.25rem 0;
+}
+
+.footer-column a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Simple Utility Classes */
+.old-price {
+    text-decoration: line-through;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* NEW TOP BAR */
+.new-top-bar {
+    background-color: #D2B48C;
+    /* Choose any distinct color you like */
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-top-bar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #4B2E2A;
+}
+
+/* HEADER */
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1rem;
+    /* Some vertical padding if you like */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* LOGO */
+.main-header .logo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+}
+
+/* MAIN NAV */
+.main-nav {
+    /* Center it like other sections */
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Add padding or horizontal spacing */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* NAV LINKS */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4B2E2A;
+    font-weight: 500;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #8B4513;
+    color: #fff;
+}
+
+/* HEADER RIGHT (SEARCH, CART, USER ICON) */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+}
+
+/* USER ICON DROPDOWN */
+.user-icon-dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+/* Hides the menu by default */
+.user-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    /* align dropdown under the emoji on the right side */
+    top: 120%;
+    /* slightly below the icon */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 120px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Show dropdown on hover */
+.user-icon-dropdown:hover .user-menu {
+    display: block;
+}
+
+/* Style the links within the user dropdown */
+.user-menu a {
+    display: block;
+    padding: 0.5rem;
+    color: #4B2E2A;
+    text-decoration: none;
+}
+
+.user-menu a:hover {
+    background-color: #D2B48C;
+    color: #fff;
+}
+
+/* The user emoji itself */
+.user-emoji {
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Make the UL (nav-links) position: relative 
+   so each .mega-menu can be absolutely placed relative to that UL.
+*/
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    position: relative;
+    /* IMPORTANT for mega-menu positioning */
+    margin: 0;
+    padding: 0;
+}
+
+/* Each list item is a dropdown trigger */
+.nav-links li {
+    position: static;
+    /* We don't want each <li> to be absolute parent, 
+                         so set it to static if it was relative before */
+}
+
+/* The anchor styles */
+.nav-links a {
+    text-decoration: none;
+    color: #4B2E2A;
+    font-weight: 500;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #8B4513;
+    color: #fff;
+}
+
+/* Make each .mega-menu absolutely fill the UL's width */
+.mega-menu {
+    display: none;
+    /* hidden by default */
+    position: absolute;
+    top: 26px;
+    /* directly below the UL */
+    left: 0;
+    width: 100%;
+    /* full width of the .nav-links container */
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+    z-index: 999;
+
+    /* To space out items horizontally, use flex */
+    justify-content: space-evenly;
+    gap: 1rem;
+    align-items: flex-start;
+    /* so columns are top-aligned */
+}
+
+/* Show the relevant .mega-menu on hover of the parent li */
+.dropdown:hover .mega-menu {
+    display: flex;
+}
+
+/* Mega-menu content columns */
+.mega-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* or flex-start if you prefer left alignment */
+    text-align: center;
+    max-width: 150px;
+}
+
+/* If you want each column's heading, images, and links */
+.mega-column h3 {
+    margin-bottom: 0.5rem;
+}
+
+.mega-column img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+}
+
+.mega-column a {
+    color: #4B2E2A;
+    text-decoration: none;
+    margin-bottom: 0.25rem;
+}
+
+.mega-column a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* BRAND LOGOS SECTION */
+.brand-logos {
+    max-width: 1200px;
+    /* Keep the layout centered like other sections */
+    margin: 2rem auto;
+    text-align: center;
+    padding: 1rem;
+}
+
+.brand-logos h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #4B2E2A;
+    /* match your site's color scheme */
+}
+
+/* The row of brand images */
+.brand-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    /* allows the logos to wrap on smaller screens */
+}
+
+.brand-row img {
+    width: 100px;
+    /* or another consistent width */
+    height: auto;
+    filter: grayscale(100%);
+    /* optional grayscale effect */
+    transition: filter 0.3s;
+    /* border-radius: 8px; (if you want rounded corners) */
+}
+
+.brand-row img:hover {
+    filter: grayscale(0%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************
+  BRANDS SECTION
+****************************************************/
+
+.brand-logos {
+    background: #dacdbb;
+    /* Light warm background color */
+    padding: 3rem 1rem;
+    text-align: center;
+    position: relative;
+}
+
+.brand-logos h2 {
+    font-size: 2rem;
+    color: #4B2E2A;
+    margin-bottom: 0.5rem;
+}
+
+.brand-intro {
+    margin-bottom: 2rem;
+    color: #6a4d46;
+    /* slightly lighter or darker shade */
+    font-size: 1.1rem;
+}
+
+.brand-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.brand-row a {
+    display: block;
+}
+
+.brand-row img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+.brand-row img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+    /* Slight zoom on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/****************************************************
+    PROMOTIONAL BANNERS SECTION
+  ****************************************************/
+
+.promotional-banners {
+    display: flex;
+    flex-wrap: wrap;
+    /* so they can stack on narrow screens */
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    /* Add side padding if you want consistent alignment */
+}
+
+/* Each banner is a half-width by default (unless screen is narrow) */
+.promo-banner {
+    position: relative;
+    flex: 1 1 calc(50% - 1rem);
+    /* half the width minus gap spacing */
+    min-height: 250px;
+    /* ensure a decent height */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    /* Smooth hover effect */
+}
+
+.promo-banner:hover {
+    transform: scale(1.02);
+    /* Subtle scale up on hover */
+}
+
+/* Overlay content inside the banners */
+.promo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    /* dark overlay */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.promo-banner:hover .promo-overlay {
+    opacity: 1;
+}
+
+.promo-overlay h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.promo-overlay p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.promo-btn {
+    display: inline-block;
+    background: #8B4513;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.promo-btn:hover {
+    background: #D2B48C;
+    color: #4B2E2A;
+    transform: scale(1.05);
+}
+
+/* Example background images for the banners 
+     Replace these with your real images or keep them as placeholders.
+  */
+.banner1 {
+    background-image: url('still-life-coffee-equipment.jpg');
+}
+
+.banner2 {
+    background-image: url('still-life-coffee-equipment.jpg');
+}
+
+/* Responsive tweak: if the screen is narrower than ~800px, 
+     the banners stack vertically */
+@media (max-width: 800px) {
+    .promotional-banners {
+        flex-direction: column;
+    }
+
+    .promo-banner {
+        flex: 1 1 100%;
+    }
+}

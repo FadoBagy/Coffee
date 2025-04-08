@@ -1,0 +1,326 @@
+/* RESETS OR BASE STYLES (Optional) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #4B2E2A;
+    background-color: #f8f8f8;
+}
+
+/****************************************************
+   PRODUCT PAGE LAYOUT
+  ****************************************************/
+
+.product-page {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* PRODUCT DETAILS WRAPPER */
+.product-details {
+    display: flex;
+    flex-wrap: wrap;
+    /* so on small screens the image and info stack */
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* LEFT SIDE: BIG PRODUCT IMAGE */
+.product-image {
+    flex: 1 1 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image img {
+    width: 100%;
+    max-width: 450px;
+    /* restrict max size so it's not too large */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+/* RIGHT SIDE: PRODUCT INFO */
+.product-info {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* TITLE */
+.product-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #4B2E2A;
+}
+
+/* PRICE BOX (OLD/NEW PRICE) */
+.price-box {
+    margin-bottom: 1rem;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.new-price {
+    color: red;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+/* SIZES */
+.product-sizes {
+    margin-bottom: 1rem;
+}
+
+.product-sizes p {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.product-sizes label {
+    display: block;
+    margin-bottom: 0.25rem;
+    cursor: pointer;
+}
+
+.product-sizes input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+/* ADD TO CART BUTTON */
+.cart-action {
+    margin: 1.5rem 0;
+}
+
+.add-to-cart-btn {
+    background-color: #8B4513;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #D2B48C;
+    color: #4B2E2A;
+}
+
+/* SHORT DESCRIPTION */
+.product-description {
+    line-height: 1.5;
+    font-size: 1rem;
+    color: #333;
+}
+
+/****************************************************
+   "YOU MAY ALSO LIKE" SECTION
+  ****************************************************/
+
+.related-products {
+    margin-top: 2rem;
+}
+
+.related-products h2 {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    color: #4B2E2A;
+}
+
+/* GRID OF 4 PRODUCT CARDS */
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+/* INDIVIDUAL CARD */
+.related-product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.related-product-card:hover {
+    transform: scale(1.03);
+}
+
+.related-product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.related-product-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #4B2E2A;
+}
+
+.related-price {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.related-add-btn {
+    background-color: #8B4513;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.related-add-btn:hover {
+    background-color: #D2B48C;
+    color: #4B2E2A;
+}
+
+/****************************************************
+   RESPONSIVE TWEAKS
+  ****************************************************/
+
+/* On smaller screens, stack the product image & info vertically */
+@media (max-width: 800px) {
+    .product-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-image,
+    .product-info {
+        flex: 1 1 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 1) Make product-details a flex container 
+   2) Add background color 
+   3) Fix a uniform height or let them stretch naturally */
+
+.updated-section {
+    display: flex;
+    align-items: stretch;
+    /* forces columns to match height */
+    gap: 2rem;
+    background-color: #f3f0eb;
+    /* example background color */
+    padding: 2rem;
+    margin-bottom: 3rem;
+    /* some spacing below */
+}
+
+/* LEFT: PRODUCT IMAGE (VERTICAL ORIENTATION) */
+.product-image {
+    flex: 1;
+    /* let it take half (or portion) of the space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* optional: a min-width to keep the image from being too narrow 
+       min-width: 300px; */
+}
+
+.product-image img {
+    /* Make the image fill the column’s height while keeping vertical orientation */
+    max-height: 100%;
+    width: auto;
+    object-fit: cover;
+    /* keeps proportions while filling */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* RIGHT: PRODUCT INFO (same height as the image side) */
+.product-info {
+    flex: 1;
+    /* also takes remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* center content vertically */
+}
+
+/* Title, price, sizes, etc. can keep your existing styles. 
+     Below are just examples or placeholders. */
+
+.product-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #4B2E2A;
+}
+
+.price-box {
+    margin-bottom: 1rem;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.new-price {
+    color: red;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.product-sizes {
+    margin-bottom: 1rem;
+}
+
+.cart-action {
+    margin: 1.5rem 0;
+}
+
+.add-to-cart-btn {
+    background-color: #8B4513;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-description {
+    line-height: 1.5;
+    font-size: 1rem;
+    color: #333;
+}
