@@ -204,6 +204,38 @@
             </div>
         </nav>
     </header>
+    <!-- MOBILE-ONLY HEADER & SIDEBAR -->
+    <div class="mobile-header" style="display: none;">
+        <!-- Single row with: Burger, Logo, Account, Cart -->
+        <div class="mobile-header-inner">
+            <span class="burger-icon" onclick="toggleMobileMenu()">☰</span>
+            <div class="mobile-logo">CoffeeShop</div>
+            <div>
+                <span class="mobile-account">👤</span>
+                <span class="mobile-cart">🛒</span>
+            </div>
+        </div>
+    </div>
+    <!-- The hidden side menu overlay (slide-in) -->
+    <div class="mobile-menu-overlay" onclick="toggleMobileMenu()" style="display: none;"></div>
+    <div class="mobile-sidebar" style="display: none;">
+        <!-- Search bar at top -->
+        <div class="mobile-search">
+            <input type="text" placeholder="Search...">
+        </div>
+
+        <!-- Nav links (no mega menus; just links) -->
+        <ul class="mobile-nav-links">
+            <li><a href="#">PROMO</a></li>
+            <li><a href="#">Кафе капсули</a></li>
+            <li><a href="#">Кафе дози</a></li>
+            <li><a href="#">Кафе на зърна</a></li>
+            <li><a href="#">Мляно кафе</a></li>
+            <li><a href="#">Консумативи</a></li>
+            <!-- Add more if needed -->
+        </ul>
+    </div>
+
 
     <!-- HERO SECTION -->
     <section class="hero-section">

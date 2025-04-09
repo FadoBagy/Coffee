@@ -32,3 +32,29 @@ function openLiveChat() {
   alert("Starting live chat session...");
   // Replace with real chat widget code as needed
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function toggleMobileMenu() {
+  const sidebar = document.querySelector('.mobile-sidebar');
+  const overlay = document.querySelector('.mobile-menu-overlay');
+  sidebar.classList.toggle('open');
+  overlay.classList.toggle('open');
+}
+
