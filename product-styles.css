@@ -324,3 +324,22 @@ body {
     font-size: 1rem;
     color: #333;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 500px) {
+    .product-image img {
+        width: 100%;
+    }
+}
